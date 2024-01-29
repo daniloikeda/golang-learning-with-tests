@@ -35,7 +35,7 @@ func main() {
 	
 }
 
-func GenDisplaceFn(acc float64, initVel float64, initDisp float64) func (time float64) float64 {
+func GenDisplaceFn(acc, initVel , initDisp float64) func (float64) float64 {
 	return func(time float64) float64 {
 		return (0.5 * acc * time * time) + (initVel * time) + initDisp;
 	}
